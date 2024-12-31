@@ -1,4 +1,5 @@
-
+import mongoose from 'mongoose';
+//test
 const productSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -16,7 +17,8 @@ const productSchema = new mongoose.Schema({
     timestamps: true
 });
 
-
+const Product = mongoose.model("Product", productSchema);
+export default Product;
 
 export const getProducts = async (req, res) => {
     try {
@@ -102,3 +104,4 @@ export const updateProducts = async (req, res) => {
         });
     }
 };
+
