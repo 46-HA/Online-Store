@@ -10,10 +10,10 @@ app.use("/api/products", productRoutes);
 
 dotenv.config();
 
-let port = 5001;
+let PORT = process.env.PORT;
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     connectDB();
-    console.log("Server is listening on port ", port)
+    console.log("Server is listening on port ", PORT)
 });
 
